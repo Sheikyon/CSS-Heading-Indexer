@@ -1,0 +1,58 @@
+.main-content .article-content h1:not(h1.section-title) {
+  counter-reset: h2Counter h3Counter h4Counter h5Counter h6Counter;
+  counter-increment: h1Counter;
+}
+
+.main-content .article-content h2 {
+  counter-reset: h3Counter h4Counter h5Counter h6Counter;
+  counter-increment: h2Counter;
+}
+
+.main-content .article-content h3 {
+  counter-reset: h4Counter h5Counter h6Counter;
+  counter-increment: h3Counter;
+}
+
+.main-content .article-content h4 {
+  counter-reset: h5Counter h6Counter;
+  counter-increment: h4Counter;
+}
+
+.main-content .article-content h5 {
+  counter-reset: h6Counter;
+  counter-increment: h5Counter;
+}
+
+.main-content .article-content h6 {
+  counter-increment: h6Counter;
+}
+
+.main-content .article-content h1:not(.section-title)::before {
+  content: counter(h1Counter) ". ";
+  color: var(--neutral-4);
+}
+
+.main-content .article-content h2::before {
+  content: counter(h1Counter) "." counter(h2Counter) ". ";
+  color: var(--neutral-4);
+}
+
+.main-content .article-content h3::before {
+  content: counter(h1Counter) "." counter(h2Counter) "." counter(h3Counter) ". ";
+  color: var(--neutral-4);
+}
+
+.main-content .article-content h4::before {
+  content: counter(h1Counter) "." counter(h2Counter) "." counter(h3Counter) "." counter(h4Counter) ". ";
+  color: var(--neutral-4);
+}
+
+.main-content .article-content h5::before {
+  content: counter(h1Counter) "." counter(h2Counter) "." counter(h3Counter) "." counter(h4Counter) "." counter(h5Counter) ". ";
+  color: var(--neutral-4);
+}
+
+.main-content .article-content h6::before {
+  content: counter(h1Counter) "." counter(h2Counter) "." counter(h3Counter) "." counter(h4Counter) "." counter(h5Counter) "." counter(h6Counter) ". ";
+  color: var(--neutral-4);
+}
